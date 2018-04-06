@@ -1,0 +1,19 @@
+ad-hoc
+sorting / binary search / greedy
+dp
+dfs
+bfs
+bitmask dp
+combo on alcumus
+dijkstra/mst
+binary search on answer
+fenwick tree / segtree
+NT on alcumus
+sweepline algos
+suffix tree / trie
+union find
+
+codeforces execution time per second:
+1.75e8 modulus operations
+1e9 multiplication operations
+3e9 addition operations
