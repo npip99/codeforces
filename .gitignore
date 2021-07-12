@@ -1,5 +1,6 @@
 *.exe
 in
 out
+executable
 a.out
 

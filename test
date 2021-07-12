@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+echo "Compiling..."
+g++ "$1" -g -O0 -DSHOW_DEBUG -o executable
+echo "Compiled!"
+valgrind --error-exitcode=1 --exit-on-first-error=yes ./executable < in
+
