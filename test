@@ -1,7 +1,11 @@
 #!/bin/bash
 set -e
 echo "Compiling..."
-g++ "$1" -g -O0 -DSHOW_DEBUG -o executable
+g++ "$1" -g -O0 -std=c++17 -DSHOW_DEBUG -o executable
 echo "Compiled!"
-valgrind --error-exitcode=1 --exit-on-first-error=yes ./executable < in
+if which valgrind &>/dev/null; then
+    valgrind --error-exitcode=1 --exit-on-first-error=yes ./executable < in
+else
+    ./executable < in
+fi
 

@@ -1,4 +1,7 @@
 *.exe
+.vscode
+executable.dSYM
+
 in
 out
 executable

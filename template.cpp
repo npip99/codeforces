@@ -24,10 +24,22 @@ typedef map<string, string> mss;
 #define mod int(1e9+7)
 
 #define MN 0
+#define TEST_CASES true
+
+void main_ans(int test_case) {
+
+}
 
 int main()
 {
+    int T = 1;
+#if TEST_CASES
+    cin >> T;
+#endif
+    for(int test_case = 1; test_case <= T; test_case++) {
+        main_ans(test_case);
+    }
 
 
-	return 0;
+    return 0;
 }
