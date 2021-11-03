@@ -4,8 +4,8 @@ echo "Compiling..."
 g++ "$1" -g -O3 -std=c++17 -DSHOW_DEBUG -o executable
 echo "Compiled!"
 if which valgrind &>/dev/null; then
-    valgrind --error-exitcode=1 --exit-on-first-error=yes ./executable < in
+    time valgrind --error-exitcode=1 --exit-on-first-error=yes ./executable < in
 else
-    ./executable < in
+    time ./executable < in
 fi
 

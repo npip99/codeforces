@@ -48,6 +48,5 @@ int main()
         main_ans(test_case);
     }
 
-
     return 0;
 }
