@@ -3,7 +3,15 @@
 #include <vector>
 #include <queue>
 #include <set>
+#include <tuple>
 #include <map>
+#include <unordered_map>
+
+#ifdef SHOW_DEBUG
+#define dbg(a, ...) printf("DEBUG: " a "\n", ##__VA_ARGS__)
+#else
+#define dbg(...) ((void*)0)
+#endif
 
 using namespace std;
 
