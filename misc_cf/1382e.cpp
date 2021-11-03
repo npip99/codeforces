@@ -39,7 +39,7 @@ typedef map<string, string> mss;
 -rw-r--r--   1 npip99  staff   2.1K Nov  2 21:21 1382b.cpp
 -rw-r--r--   1 npip99  staff   1.0K Nov  2 21:04 1382c1.cpp
 -rw-r--r--   1 npip99  staff   2.1K Nov  2 21:58 1382c2.cpp
--rw-r--r--   1 npip99  staff   2.0K Nov  2 22:20 1382d.cpp
+-rw-r--r--   1 npip99  staff   2.0K Nov  2 22:20 1382d.cpp, 10 minutes to make n^2 instead of n^3 memo
 -rw-r--r--   1 npip99  staff   3.1K Nov  2 23:03 1382e.cpp
 */
 

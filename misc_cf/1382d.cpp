@@ -34,19 +34,19 @@ typedef map<string, string> mss;
 #define MN 0
 #define TEST_CASES true
 
-map<tuple<int, int, int>, bool> memo;
-bool dp(vector<int>& arr, int i, int rema, int remb) {
-    if (rema < 0 || remb < 0) {
+map<pair<int, int>, bool> memo;
+bool dp(vector<int>& arr, int i, int rema) {
+    if (rema < 0) {
         return false;
     }
     if (i == arr.size()) {
-        return rema == 0 && remb == 0;
+        return rema == 0;
     }
-    if (memo.count({i, rema, remb})) {
-        return memo[{i, rema, remb}];
+    if (memo.count({i, rema})) {
+        return memo[{i, rema}];
     }
     int region = arr[i];
-    return memo[{i, rema, remb}] = (dp(arr, i+1, rema - region, remb) || dp(arr, i+1, rema, remb - region));
+    return memo[{i, rema}] = (dp(arr, i+1, rema - region) || dp(arr, i+1, rema));
 }
 
 void main_ans(int test_case) {
@@ -72,7 +72,7 @@ void main_ans(int test_case) {
     regions.push_back(cumulative);
 
     memo.clear();
-    bool ans = dp(regions, 0, n, n);
+    bool ans = dp(regions, 0, n);
     
     cout << (ans ? "YES" : "NO") << endl;
 }
