@@ -1,11 +1,10 @@
 #!/bin/bash
 set -e
 echo "Compiling..."
-g++ "$1" -g -O3 -std=c++17 -DSHOW_DEBUG -o executable
+g++ "./misc_cf/$1" -g -O3 -std=c++17 -DSHOW_DEBUG -o executable
 echo "Compiled!"
 if which valgrind &>/dev/null; then
     time valgrind --error-exitcode=1 --exit-on-first-error=yes ./executable < in
 else
     time ./executable < in
 fi
-
